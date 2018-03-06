@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:id="@+id/boxInsetLayout"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context="com.nehvin.s12e185adaptingfordifffaces.MainActivity"
+    tools:deviceIds="wear">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameLayout"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:boxedEdges="all">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/someTextID"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/someText"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:background="@null"
+            android:layout_gravity="bottom|left"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:id="@+id/checkButton"
+            android:onClick="roundOrSquare"
+            android:src="@drawable/ic_cc_checkmark" />
+
+        <ImageButton
+            android:background="@null"
+            android:layout_gravity="bottom|right"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:id="@+id/clearButton"
+            android:onClick="roundOrSquare"
+            android:src="@drawable/ic_cc_clear" />
+
+    </FrameLayout>
+</android.support.wear.widget.BoxInsetLayout>
